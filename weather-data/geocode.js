@@ -5,7 +5,7 @@
         axios
             .get(geocodeApi)
             .then((response) => {
-                const [latitude , longitude] = response.data.features[0].center;
+                const [longitude , latitude] = response.data.features[0].center;
                 const [location] = response.data.features[0].place_name
                 callback(undefined , {
                     latitude ,

@@ -1,8 +1,8 @@
 const axios = require('axios');
 const { Module } = require('module');
 
-const weatherstack = ( location , callback) => {
-    const weatherstackApi = `http://api.weatherstack.com/current?access_key=125eba9badf202016ee32daf77565b73&query=${location}&units=m`;
+const weatherstack = ( logitude , longitude , callback) => {
+    const weatherstackApi = `http://api.weatherstack.com/current?access_key=125eba9badf202016ee32daf77565b73&query=${logitude},${longitude}&units=m`;
     axios
     .get(weatherstackApi)
     .then((response) => {
