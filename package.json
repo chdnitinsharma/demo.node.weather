@@ -1,0 +1,22 @@
+{
+  "name": "demo.node.weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clear",
+  "scripts": {
+    "test": "clear"
+  },
+  "repository": {
+    "type": "git",
+    "url": "npm start"
+  },
+  "keywords": [
+    "npm",
+    "start"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
