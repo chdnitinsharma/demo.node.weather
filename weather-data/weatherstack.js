@@ -6,10 +6,11 @@ const weatherstack = ( location , callback) => {
     axios
     .get(weatherstackApi)
     .then((response) => {
+        const {temperature , feelslike, weather_descriptions } = response.data.current ;
         callback(undefined , {
-           temperature : response.data.current.temperature,
-           feelslike : response.data.current.feelslike ,
-           weather_descriptions :response.data.current.weather_descriptions
+           temperature ,
+           feelslike ,
+           weather_descriptions 
         });
     })
     .catch((error) => {

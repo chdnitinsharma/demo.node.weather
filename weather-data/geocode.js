@@ -5,10 +5,12 @@
         axios
             .get(geocodeApi)
             .then((response) => {
+                const [latitude , longitude] = response.data.features[0].center;
+                const [location] = response.data.features[0].place_name
                 callback(undefined , {
-                    latitude :response.data.features[0].center[1] ,
-                    longitude : response.data.features[0].center[0],
-                    location : response.data.features[0].place_name
+                    latitude ,
+                    longitude ,
+                    location 
                 });
              })
             .catch((error)=>{

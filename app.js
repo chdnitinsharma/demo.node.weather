@@ -2,12 +2,12 @@ const axios = require("axios");
 const geocode = require("./weather-data/geocode");
 const weatherstack = require("./weather-data/weatherstack");
 
-geocode("mohali", (error, data) => {
+geocode("faridabad", (error, data) => {
   console.log("error", error);
   console.log("data", data);
 });
 
-weatherstack("37.8267,-122.4233", (error, data) => {
+weatherstack("30.695527,76.717623", (error, data) => {
   console.log("error", error);
   console.log("data", data);
 });
